@@ -169,7 +169,7 @@ class LoginScreen extends StatelessWidget {
                     textAlign: TextAlign.start,
                   ),
                   Text(
-                    'Find. Invest. Chill',
+                    'Find. Invest. Chill.',
                     style: (Theme.of(context).textTheme.headlineLarge ?? const TextStyle())
                         .copyWith(color: isDark ? AppColors.homeLightGrey : AppColors.blueBg, fontSize: 30.sp, fontWeight: FontWeight.w600),
                     textAlign: TextAlign.start,
