@@ -1,5 +1,3 @@
-import 'package:dwello_app/features/authentication/screens/onboarding/onboarding_screen.dart';
-import 'package:dwello_app/utils/constants/image_strings.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
