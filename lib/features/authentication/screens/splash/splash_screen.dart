@@ -45,7 +45,7 @@ class SplashScreen extends StatelessWidget {
                   ),
 
                   AnimatedPositioned(
-                    right: controller.animate.value ? 0.3.sw : 5.w,
+                    right: controller.animate.value ? 0.29.sw : 5.w,
                     bottom: 0.48.sh,
                     duration: Duration(milliseconds: 2500),
                     child: AnimatedOpacity(
@@ -55,7 +55,7 @@ class SplashScreen extends StatelessWidget {
                         'DWELLO',
                         style: TextStyle(
                           fontFamily: 'Bricolage Grotesque',
-                          fontSize: 34.sp,
+                          fontSize: 35.sp,
                           letterSpacing: 4.sp,
                           fontWeight: FontWeight.w700,
                           color: isDark ? Colors.white : AppColors.blueBg,
@@ -65,7 +65,7 @@ class SplashScreen extends StatelessWidget {
                   ),
 
                   AnimatedPositioned(
-                    right: controller.animate.value ? 0.35.sw : 5.w,
+                    right: controller.animate.value ? 0.34.sw : 5.w,
                     bottom: 0.45.sh,
                     duration: Duration(milliseconds: 2500),
                     child: AnimatedOpacity(

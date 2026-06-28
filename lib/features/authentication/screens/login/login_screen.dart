@@ -1,7 +1,7 @@
 import 'package:dwello_app/features/authentication/controllers/login/login_bg_controller.dart';
-import 'package:dwello_app/features/authentication/controllers/splash/splash_controller.dart';
 import 'package:dwello_app/features/authentication/screens/login/widgets/login_bg_container.dart';
-import 'package:dwello_app/features/home/home_screen.dart';
+import 'package:dwello_app/features/authentication/screens/login/widgets/login_modal_bottom.dart';
+import 'package:dwello_app/features/authentication/screens/signup/signup_modal_bottom.dart';
 import 'package:dwello_app/utils/constants/colors.dart';
 import 'package:dwello_app/utils/constants/image_strings.dart';
 import 'package:dwello_app/utils/helpers/helper_functions.dart';
@@ -16,51 +16,10 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = AppHelperFunctions.isDarkMode(context);
     final bgController = Get.put(LoginBgController());
-    final footerController = SplashController.instance;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 30.sp, horizontal: 12.sp),
-        // child: Column(
-        //   children: [
-        //     SingleChildScrollView(
-        //       scrollDirection: Axis.horizontal,
-        //       child: Row(
-        //         children: [
-        //           LoginBgContainer(img: AppImages.products8),
-        //           LoginBgContainer(img: AppImages.products2),
-        //           LoginBgContainer(img: AppImages.products3),
-        //           LoginBgContainer(img: AppImages.products1),
-        //           LoginBgContainer(img: AppImages.products19),
-        //           LoginBgContainer(img: AppImages.products6),
-        //           LoginBgContainer(img: AppImages.products11),
-        //           LoginBgContainer(img: AppImages.products18),
-        //           LoginBgContainer(img: AppImages.products5),
-        //           LoginBgContainer(img: AppImages.products5),
-        //         ],
-        //       ),
-        //     ),
-        //     SizedBox(height: 10.sp,),
-        //     SingleChildScrollView(
-        //       scrollDirection: Axis.horizontal,
-        //       child: Row(
-        //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //         children: [
-        //           LoginBgContainer(img: AppImages.products18),
-        //           LoginBgContainer(img: AppImages.products9),
-        //           LoginBgContainer(img: AppImages.products17),
-        //           LoginBgContainer(img: AppImages.products13),
-        //           LoginBgContainer(img: AppImages.products5),
-        //           LoginBgContainer(img: AppImages.products9),
-        //           LoginBgContainer(img: AppImages.products8),
-        //           LoginBgContainer(img: AppImages.products14),
-        //           LoginBgContainer(img: AppImages.products15),
-        //           LoginBgContainer(img: AppImages.products7),
-        //         ],
-        //       ),
-        //     ),
-        //     SizedBox(height: 10.sp,),
-        //   ],
-        // ),
         child: Stack(
           children: [
             Positioned(
@@ -87,6 +46,10 @@ class LoginScreen extends StatelessWidget {
                       AppImages.products18,
                       AppImages.products5,
                       AppImages.products14,
+                      AppImages.products42,
+                      AppImages.products44,
+                      AppImages.products28,
+                      AppImages.products30,
                     ];
 
                     return Padding(
@@ -133,11 +96,15 @@ class LoginScreen extends StatelessWidget {
                       final images = [
                         AppImages.products18,
                         AppImages.products9,
-                        AppImages.products17,
-                        AppImages.products13,
+                        AppImages.products41,
+                        AppImages.products19,
                         AppImages.products5,
                         AppImages.products14,
+                        AppImages.products31,
+                        AppImages.products17,
                         AppImages.products21,
+                        AppImages.products33,
+                        AppImages.products29,
                         AppImages.products9,
                         AppImages.products8,
                         AppImages.products15,
@@ -185,10 +152,27 @@ class LoginScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 33.h,),
 
+
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
+                      await showModalBottomSheet(
+                        context: context,
+                        isScrollControlled: true,
+                        showDragHandle: false,
+                        backgroundColor: AppColors.white,
+
+                        builder: (context) {
+                          return AnimatedPadding(
+                            duration: const Duration(milliseconds: 350),
+                            curve: Curves.easeOut,
+                            padding: EdgeInsets.only(
+                              bottom: MediaQuery.of(context).viewInsets.bottom,
+                            ),
+                            child: const SignupModalBottom(),
+                          );
+                        },
+                      );
                       bgController.stop();
-                      Get.to(() => const HomeScreen()); /// use a bottom modal sheet for the login and signup
                     },
                     child: Container(
                       height: 56.h,
@@ -211,15 +195,30 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(height: 18.h,),
 
                   InkWell(
-                    onTap: () {
+                    onTap: () async {
+                      await showModalBottomSheet(
+                        context: context,
+                        isScrollControlled: true,
+                        showDragHandle: false,
+                        backgroundColor: AppColors.white,
+
+                        builder: (context) {
+                          return AnimatedPadding(
+                            duration: const Duration(milliseconds: 350),
+                            curve: Curves.easeOut,
+                            padding: EdgeInsets.only(
+                              bottom: MediaQuery.of(context).viewInsets.bottom,
+                            ),
+                            child: const LoginModalBottom(),
+                          );
+                        },
+                      );
                       bgController.stop();
-                      Get.to(() => const HomeScreen());
                     },
                     child: Container(
                       height: 56.h,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        //color: isDark ? AppColors.homeLightGrey : AppColors.blueBg,
                         border: Border.all(color: isDark ? AppColors.homeLightGrey : AppColors.blueBg, width: 0.7.h),
                         borderRadius: BorderRadius.circular(12.r),
                       ),
@@ -250,7 +249,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ],
         ),
-      )
+      ),
     );
   }
 }

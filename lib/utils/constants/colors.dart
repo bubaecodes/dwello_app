@@ -6,10 +6,13 @@ class AppColors {
   ///Background Colors
   static const Color blueBg = Color(0xFF08083B);
   static const Color yellowBg = Color(0xFFF8BD00);
-  static const Color whiteBg = Color(0xFFF5F5F5);
+  static const Color whiteBg = Color(0xFFFAFAFA);
+  //static const Color whiteBg = Color(0xFFF5F5F5);
   static const Color lightGrey = Color(0xFFF4F4F5);
   static const Color lighterGrey = Color(0xFFFAFAFA);
   static const Color homeLightGrey = Color(0xFFF5F5F5);
+  static const Color darkBlue = Color(0xFF090949);
+  static const Color lightBlue = Color(0xFF000080);
 
   /// text colors
   static const Color white = Color(0xFFFFFFFF);

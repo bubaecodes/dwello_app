@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           title: 'Dwello App',
           theme: DwelloAppTheme.lightTheme,
           darkTheme: DwelloAppTheme.darkTheme,
-          themeMode: ThemeMode.dark,
+          themeMode: ThemeMode.light,
           debugShowCheckedModeBanner: false,
           home: SplashScreen(),
         );

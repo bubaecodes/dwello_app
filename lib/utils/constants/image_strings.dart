@@ -3,8 +3,10 @@ class AppImages{
   static const String appLogo = "assets/icons/dwello_logo.png";
   static const String splashBg = "assets/images/splash/dwello_splash_bg.png";
   static const String splashLightBg = "assets/images/splash/splash_light_bg.png";
-  // static const String darkAppLogo = "assets/logos/tt_logo.png";
-  // static const String lightAppLogo = "assets/logos/tt_logo.png";
+
+  ///social icons
+  static const String appleIcon = "assets/icons/apple_icon-removebg-preview.png";
+  static const String googleIcon = "assets/icons/google_icon-removebg-preview.png";
 
 
   ///OnBoarding Images
@@ -35,4 +37,28 @@ class AppImages{
   static const String products19 = "assets/images/home/dwello_listing_23.png";
   static const String products20 = "assets/images/home/dwello_listing_24.png";
   static const String products21 = "assets/images/randoms/dwello_login_bg.png";
+  static const String products22 = "assets/images/home/dwello_listing_25.png";
+  static const String products23 = "assets/images/home/dwello_listing_26.png";
+  static const String products24 = "assets/images/home/dwello_listing_27.png";
+  static const String products25 = "assets/images/home/dwello_listing_28.png";
+  static const String products26 = "assets/images/home/dwello_listing_29.png";
+  static const String products27 = "assets/images/home/dwello_listing_30.png";
+  static const String products28 = "assets/images/home/dwello_listing_31.png";
+  static const String products29 = "assets/images/home/dwello_listing_32.png";
+  static const String products30 = "assets/images/home/dwello_listing_33.png";
+  static const String products31 = "assets/images/home/dwello_listing_34.png";
+  static const String products32 = "assets/images/home/dwello_listing_35.png";
+  static const String products33 = "assets/images/home/dwello_listing_36.png";
+  static const String products34 = "assets/images/home/dwello_listing_37.png";
+  static const String products35 = "assets/images/home/dwello_listing_38.png";
+  static const String products36 = "assets/images/home/dwello_listing_39.png";
+  static const String products37 = "assets/images/home/dwello_listing_40.png";
+  static const String products38 = "assets/images/home/dwello_listing_41.png";
+  static const String products39 = "assets/images/home/dwello_listing_42.png";
+  static const String products40 = "assets/images/home/dwello_listing_43.png";
+  static const String products41 = "assets/images/home/dwello_listing_44.png";
+  static const String products42 = "assets/images/home/dwello_listing_45.png";
+  static const String products43 = "assets/images/home/dwello_listing_46.png";
+  static const String products44 = "assets/images/home/dwello_listing_47.png";
+  static const String products45 = "assets/images/home/dwello_listing_48.png";
 }
