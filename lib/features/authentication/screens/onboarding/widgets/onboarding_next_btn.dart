@@ -35,7 +35,7 @@ class OnBoardingNextButton extends StatelessWidget {
           child: Obx(() => Text(
             controller.currentPageIndex < 2 ? 'Next' : 'Login',
             style: (Theme.of(context).textTheme.labelSmall ?? const TextStyle())
-                .copyWith(color: isDark ? AppColors.blueBg : AppColors.white, fontSize: 16.sp, fontWeight: FontWeight.w500),
+                .copyWith(color: isDark ? AppColors.blueBg : AppColors.white, fontSize: 16.sp, fontWeight: FontWeight.w600),
           )),
         ),
       ),

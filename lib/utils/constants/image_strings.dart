@@ -61,4 +61,8 @@ class AppImages{
   static const String products43 = "assets/images/home/dwello_listing_46.png";
   static const String products44 = "assets/images/home/dwello_listing_47.png";
   static const String products45 = "assets/images/home/dwello_listing_48.png";
+  static const String products46 = "assets/images/home/dwello_listing_49.png";
+  static const String products47 = "assets/images/home/dwello_listing_50.png";
+  static const String products48 = "assets/images/home/dwello_listing_51.png";
+  static const String products49 = "assets/images/home/dwello_listing_52.png";
 }

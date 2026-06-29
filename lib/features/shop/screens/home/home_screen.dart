@@ -1,4 +1,5 @@
 import 'package:dwello_app/features/shop/screens/home/widgets/home_appbar_slider.dart';
+import 'package:dwello_app/features/shop/screens/home/widgets/home_body/home_body.dart';
 import 'package:dwello_app/utils/constants/colors.dart';
 import 'package:dwello_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/cupertino.dart';
@@ -143,6 +144,37 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 16.h,),
 
                 HomeAppbarSlider(),
+                SizedBox(height: 10.h),
+
+                Align(
+                  alignment: AlignmentGeometry.centerLeft,
+                  child: Container(
+                    width: 66.w,
+                    height: 22.h,
+                    padding: EdgeInsets.all(2.sp),
+                    decoration: BoxDecoration(
+                      color: Colors.deepOrange,
+                      borderRadius: BorderRadius.circular(15.r),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(CupertinoIcons.flame_fill, color: AppColors.whiteBg, size: 15.sp,),
+                        SizedBox(width: 2.sp,),
+                        Text(
+                          'Deals',
+                          style: (Theme.of(context).textTheme.headlineLarge ?? const TextStyle())
+                              .copyWith(color: isDark ? AppColors.lightGrey.withValues(alpha: 0.6) : AppColors.lightGrey, fontSize: 13.sp, fontWeight: FontWeight.w400),
+                          textAlign: TextAlign.start,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10.h),
+
+                //HomeCarousel(),
+                HomeBody(),
               ],
             ),
           ),
