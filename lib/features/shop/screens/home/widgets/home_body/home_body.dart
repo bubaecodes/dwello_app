@@ -1,5 +1,11 @@
+import 'package:dwello_app/features/shop/screens/home/widgets/home_body/home_carousel.dart';
+import 'package:dwello_app/features/shop/screens/home/widgets/home_body/home_carousel_dot.dart';
+import 'package:dwello_app/utils/constants/colors.dart';
+import 'package:dwello_app/utils/constants/image_strings.dart';
 import 'package:dwello_app/utils/helpers/helper_functions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -194,7 +200,80 @@ class HomeBody extends StatelessWidget {
         //   ),
         // ),
 
-        //HomeCardContainer(property: pr,),
+        const HomeCarousel(),
+        SizedBox(height: 10.h,),
+
+        HomeCarouselDot(),
+        SizedBox(height: 15.h,),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Recommendation',
+              style: (Theme.of(context).textTheme.headlineLarge ?? const TextStyle())
+                  .copyWith(color: isDark ? AppColors.lightGrey.withValues(alpha: 0.9) : AppColors.blueBg,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w400,
+              ),
+              textAlign: TextAlign.start,
+            ),
+
+            Icon(
+              CupertinoIcons.ellipsis_vertical_circle,
+              //CupertinoIcons.ellipsis_vertical,
+              size: 23.sp,
+              color: isDark ? AppColors.whiteBg : AppColors.blueBg,
+            ),
+
+          ],
+        ),
+        SizedBox(height: 14.h,),
+
+        Container(
+          width: double.infinity,
+          height: 80.h,
+          decoration: BoxDecoration(
+            color: isDark ? AppColors.darkBlue.withValues(alpha: 0.9) : AppColors.blueBg.withValues(alpha: 0.95),
+            borderRadius: BorderRadius.circular(12.r),
+            border: Border.all(color: isDark ? AppColors.homeLightGrey : Colors.purple, width: 0.5.w),
+          ),
+          child: Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 8.w),
+                child: Container(
+                  width: 75.w,
+                  height: 66.h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(9.r),
+                    image: DecorationImage(
+                      image: AssetImage(AppImages.products22),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 14.h, horizontal: 10.w),
+                child: Column(
+                  children: [
+                    Text(
+                      'Recommendation',
+                      style: (Theme.of(context).textTheme.headlineLarge ?? const TextStyle())
+                          .copyWith(color: isDark ? AppColors.lightGrey.withValues(alpha: 0.9) : AppColors.blueBg,
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }
