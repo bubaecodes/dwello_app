@@ -5,10 +5,9 @@ import 'package:get/get.dart';
 class HomeCarouselController extends GetxController {
   static HomeCarouselController get instance => Get.find();
 
+  RxBool isFav = false.obs;
   final currentIndex = 0.obs;
-
   final dragging = false.obs;
-
   final dragOffset = 0.0.obs;
   double get offset => dragOffset.value;
 
@@ -134,6 +133,10 @@ class HomeCarouselController extends GetxController {
       optionTSubtitle3: 'Penthouse',
     ),
   ].obs;
+
+  void favorite(){
+    isFav.toggle();
+  }
 
   int get previousIndex {
     if (currentIndex.value == 0) {

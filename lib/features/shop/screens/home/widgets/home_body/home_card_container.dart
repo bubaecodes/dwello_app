@@ -1,8 +1,11 @@
+import 'package:dwello_app/features/shop/controllers/home/home_carousel_controller.dart';
 import 'package:dwello_app/features/shop/models/home/home_carousel_model.dart';
 import 'package:dwello_app/utils/constants/colors.dart';
 import 'package:dwello_app/utils/helpers/helper_functions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class HomeCardContainer extends StatelessWidget {
@@ -14,6 +17,7 @@ class HomeCardContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = AppHelperFunctions.isDarkMode(context);
+    final controller = HomeCarouselController.instance;
 
     return Center(
       child: Padding(
@@ -50,20 +54,24 @@ class HomeCardContainer extends StatelessWidget {
                       Positioned(
                         top: 22.h,
                         right: 21.w,
-                        child: InkWell(
-                          child: Container(
-                            width: 38.w,
-                            height: 38.h,
-                            padding: EdgeInsets.all(8.sp),
-                            decoration: BoxDecoration(
-                              color: AppColors.lightGrey,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                              child: Icon(
-                                Iconsax.heart,
-                                size: 22.sp,
-                                color: AppColors.blueBg,
+                        child: Obx(
+                          ()=> InkWell(
+                            onTap: controller.favorite,
+                            child: Container(
+                              width: 38.w,
+                              height: 38.h,
+                              padding: EdgeInsets.all(8.sp),
+                              decoration: BoxDecoration(
+                                color: AppColors.lightGrey,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  controller.isFav.value ? CupertinoIcons.heart_fill : Iconsax.heart,
+                                  size: controller.isFav.value ? 24.sp : 22.sp,
+                                  color: AppColors.blueBg,
+                                  //color: controller.isFav.value ? Colors.transparent : Colors.red,
+                                ),
                               ),
                             ),
                           ),

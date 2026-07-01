@@ -78,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
 
-                        /// make the name ellipsis
+
                         Text(
                           'Enugu, Nigeria',
                           style: (Theme.of(context).textTheme.headlineLarge ?? const TextStyle())

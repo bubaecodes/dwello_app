@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                       AppImages.products5,
                       AppImages.products14,
                       AppImages.products42,
-                      AppImages.products44,
+                      AppImages.products39,
                       AppImages.products28,
                       AppImages.products30,
                     ];
@@ -106,9 +106,9 @@ class LoginScreen extends StatelessWidget {
                         AppImages.products33,
                         AppImages.products29,
                         AppImages.products9,
-                        AppImages.products8,
+                        AppImages.products48,
                         AppImages.products15,
-                        AppImages.products7,
+                        AppImages.products33,
                       ];
 
                       return Padding(

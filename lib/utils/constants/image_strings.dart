@@ -1,6 +1,8 @@
 class AppImages{
   ///App Logos / Splash
   static const String appLogo = "assets/icons/dwello_logo.png";
+  static const String appDarkLogo = "assets/icons/dwello_dark_logo.png";
+  static const String appLightLogo = "assets/icons/dwello_light_logo.png";
   static const String splashBg = "assets/images/splash/dwello_splash_bg.png";
   static const String splashLightBg = "assets/images/splash/splash_light_bg.png";
 
