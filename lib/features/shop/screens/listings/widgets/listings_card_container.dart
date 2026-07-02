@@ -24,7 +24,7 @@ class ListingsCardContainer extends StatelessWidget {
       itemBuilder: (context, index){
         final listing = controller.listings[index];
         return InkWell(
-          onTap: ()=> Get.to(ListedItemScreen()),
+          onTap: ()=> Get.to(ListedItemScreen(listingIndex: index,)),
           child: Container(
             width: 0.44.sw,
             height: 0.26.sh,

@@ -24,7 +24,7 @@ class HomeCardContainer extends StatelessWidget {
         padding: EdgeInsets.only(right: 8.w),
         child: Container(
           width: 0.7.sw,
-          height: 0.402.sh,
+          height: 0.403.sh,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(23.r),
             color: isDark

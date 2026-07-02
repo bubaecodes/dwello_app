@@ -102,7 +102,7 @@ class ListingsScreen extends StatelessWidget {
                 HomeAppbarSlider(),
                 SizedBox(height: 10.h),
 
-                ListingsCardContainer()
+                ListingsCardContainer(),
               ],
             ),
           ),

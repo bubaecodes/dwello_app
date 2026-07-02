@@ -12,7 +12,7 @@ class HomeCarousel extends StatelessWidget {
     final controller = Get.put(HomeCarouselController());
 
     final cardWidth = 0.7.sw;
-    final cardHeight = 0.402.sh;
+    final cardHeight = 0.403.sh;
 
     final visibleWidth = 0.12.sw;
 

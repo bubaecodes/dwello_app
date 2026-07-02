@@ -20,7 +20,7 @@ class HomeRecommendationContainer extends StatelessWidget {
       itemBuilder: (context, index){
         final card = controller.cards[index];
         return InkWell(
-          onTap: ()=> Get.to(ListedItemScreen()),
+          onTap: ()=> Get.to(ListedItemScreen(listingIndex: 0,)),
           child: Container(
             width: double.infinity,
             height: 80.h,
